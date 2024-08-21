@@ -1,4 +1,14 @@
-import streamlit as st
+import os
+import subprocess
+
+# Clone TotoroUI if not already cloned
+if not os.path.exists('TotoroUI'):
+    subprocess.run(['git', 'clone', '-b', 'totoro3', 'https://github.com/camenduru/ComfyUI', 'TotoroUI'])
+
+# Ensure the necessary modules are in the path
+import sys
+sys.path.append('TotoroUI')
+
 import torch
 import numpy as np
 from PIL import Image
