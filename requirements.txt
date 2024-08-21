@@ -1,7 +1,4 @@
-streamlit
 torch
-einops
-diffusers
-accelerate
-xformers==0.0.27
-pillow
+numpy
+Pillow
+git+https://github.com/camenduru/ComfyUI.git@totoro3
