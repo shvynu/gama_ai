@@ -1,15 +1,20 @@
 import os
 import sys
+import subprocess
 import torch
 import numpy as np
 from PIL import Image
 import random
 import streamlit as st
 
+# Clone the repository if it doesn't exist
+if not os.path.exists('ComfyUI'):
+    subprocess.run(['git', 'clone', '-b', 'totoro3', 'https://github.com/camenduru/ComfyUI.git'])
+
 # Ensure the necessary modules are in the path
 sys.path.append(os.path.abspath('ComfyUI'))
 
-# Import TotoroUI modules
+# Now we can import the required modules
 from nodes import NODE_CLASS_MAPPINGS
 from totoro_extras import nodes_custom_sampler
 from totoro import model_management
