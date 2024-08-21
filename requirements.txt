@@ -1,4 +1,4 @@
 torch
 numpy
 Pillow
-git+https://github.com/camenduru/ComfyUI.git@totoro3
+streamlit
