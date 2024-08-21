@@ -7,6 +7,13 @@ from PIL import Image
 import random
 import streamlit as st
 
+# Check if safetensors is installed, if not, install it
+try:
+    import safetensors
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "safetensors"])
+    import safetensors
+
 # Clone the repository if it doesn't exist
 if not os.path.exists('ComfyUI'):
     subprocess.run(['git', 'clone', '-b', 'totoro3', 'https://github.com/camenduru/ComfyUI.git'])
