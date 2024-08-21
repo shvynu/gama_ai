@@ -1,0 +1,7 @@
+streamlit
+torch
+einops
+diffusers
+accelerate
+xformers==0.0.27
+pillow
